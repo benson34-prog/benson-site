@@ -51,6 +51,16 @@ h3{text-align:center;}
   color:rgb(23,0,10);
   font-weight: bold;
 }
+
+.loadin {text-align:center;font-size:19px;
+  overflow: hidden;
+  max-height: 90px;
+  opacity: 1;
+  transition: opacity 1s ease, max-height 1s ease;
+  animation: hideLoading 1s ease 10s forwards;
+  color:rgb(23,0,10);
+  font-weight: bold;
+}
 @keyframes hideLoading {
   to {
     opacity: 0;
@@ -65,7 +75,7 @@ figure ul{color:rgb(3,0,0);}
 .student-bio nav{margin-left:100px;}
 .ham{width:30px;border:2px solid rgb(245,20,33);margin:5px;}
 .ham-menu:hover{background-color:rgba(0,0,0,0.2);cursor:pointer;}
-.ham-menu{padding:5px;width:45px;margin:7px auto;}
+.ham-menu{padding:5px;width:45px;margin:9px auto;}
 
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
@@ -211,53 +221,7 @@ For information about class attendance and lecture halls informations and statis
 <p class="rem">Info only Available to the students Portal and Kusoma Portal.<a href="https://www.ku.kusomaportal.com">Click here for Your Kusoma Portal</a> </p>
 
 <hr>
-<div class="loading">Loading ....Please wait</div>
-<table>
-<p class="head">Second Semester (April) 2024/2025 MUOKI B.WAMBUA Examination Results</p>
-<tr>
-<th>UNIT CODE</th> <th>UNIT NAME</th> <th>CAT MARKS</th> <th>FINAL EXAM MARKS</th> <th>TOTAL VALUE<br>(out of 100)</th> <th>GRADING</th>
-</tr>
-
-<tr>
-<th>BAC 101</th><td>Fundamentals of<br>Accounting II</td><td>15/30<p class="pa">Fair</p></td><td>49/70<p class="pa">Good</p></td><td>64%</td><td>B</td>
-</tr>
-
-<tr>
-<th>EET 101</th><td>MacroEconomic<br>Theory I</td><td>27/30<p class="pa">Very Good</p></td><td>55/70<p class="pa">Good</p></td><td>82%</td><td>A</td>
-</tr>
-
-
-<tr>
-<th>UCU 111</th><td>Introduction to Critical<br>and Creative thinking</td><td>25/30<p class="pa">Good</p></td><td>47/70<p class="pa">Fair</p></td><td>72%</td> <td>A</td>
-</tr>
-
-
-<tr>
-<th>UCU 110</th><td>Communication<br>Skills</td><td>25/30<p class="pa">Goog</p></td><td>62/70<p class="pa">Excellent</p></td><td>87% <td>A</td>
-</tr>
-
-
-<tr>
-<th>UCU 106</th><td>Ethics,Diversity<br>and Citizenship</td><td>30/30<p class="pa">Excellent</p></td><td>62/70<p class="pa">Excellent</p></td><td>92%<td>A</td>
-</tr>
-
-
-<tr>
-<th>BBA 102</th><td>Principles of<br>Management</td><td>27/30<p class="pa">Very Good</p></td><td>34/70<p class="pa">Good</p></td><td>61%<td>B</td>
-</tr>
-
-<tr>
-<th>SST 101</th><td>Introduction to probability<br>and statistics</td><td>20/30<p class="pa">Fair</p></td><td>40/70<p class="pa">Good</p></td><td>60%<td>B</td>
-</tr>
-
-</table>
-<p class="remarks">GPA:80.071 <br><br>GRADE:A <br><br>POSITIONED GRADE</strong> :FIRST CLASS HONOR</p>
-<p class="rem"><b>Remarks:</b>Muoki Benson Wambua Successfully did the Second Semester Exams.</p>
-<p class="rem">Note:If you have missing <b>MARKS</b> Please reach out to your respective lectures.</p>
-<p class="em">This form is only available when stumped and signed by Registra Academic.<p>
-<p class="rem"><b>Stambed by:</b> George Koori</b></p>
-<p class="rem">Info only Available to the students Portal and Kusoma Portal.<a href="https://www.ku.kusomaportal.com">Click here for Your Kusoma Portal</a> </p>
-
+<div class="loadin"><p style="text-align:center;font-size:19px;font-weight=800;"><i style="color:gray;">Semester (2) 2024/2025 Results in progress....<br>(coming soon)</i></p></div>
 
 </figure>
 
@@ -268,9 +232,9 @@ For information about class attendance and lecture halls informations and statis
 <div class="link" onclick="confirmNavigation('#fees')">FEE STATEMENT</div>
 <div class="link" onclick="confirmNavigation('#payment')">FEE PAYMENT</div>
 </section>
-<figure class="sec" id="feeinfo"><p class="para">Info not available please try again later</p>
+<figure class="sec" id="feeinfo"><p class="para">Info not available please try again later.<br>Check your internet connection and try again!</p>
 </figure>
-<figure id="fees"><p class="para">Info notllll available please try again later</p>
+<figure id="fees"><p class="para">Info not available please try again later.<br>Check your internet connection and try again!</p>
 </figure>
 <figure class="pay" id="payment">
 <div class="loading">Loading Please Wait...</div>
