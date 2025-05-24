@@ -69,20 +69,27 @@ h3{text-align:center;}
 }
 .menu{display:none;
 margin-top:10px;}
+.menyu{position:fixed;top:0px;left:60vw;z-index:20;margin-top:-12px;}
+.navi{display:none;flex-direction:column;background:darkblue;width:188px;}
 
 
 figure ul{color:rgb(3,0,0);}
 .student-bio nav{margin-left:100px;}
-.ham{width:30px;border:2px solid rgb(245,250,253);margin:5px;}
-.ham-menu:hover{background-color:rgba(245,245,245,0.2);cursor:pointer;z-index:2;}
-.ham-menu{padding:5px;width:45px;margin:0 20px auto;position:fixed;top:0;left:80vw;z-index:2;}
+.ham{width:20px;border:1px solid rgb(245,250,253);margin:5px;}
+.ham-menu:hover{background-color:rgba(245,245,245,0.2);cursor:pointer;z-index:20;}
+.ham-menu{padding:5px;width:45px;margin:0 20px auto;position:fixed;top:0;left:85vw;z-index:20;background-color:black;}
 header{position:relative;}
-.width{background-color:black;position:fixed;height:50px;top:0;width:100%;z-index:2;margin-bottom:12px;}
+.width{background-color:black;position:fixed;height:50px;top:0;width:100%;z-index:20;margin-bottom:12px;}
 img{margin-top:40px;}
 
-.ken{position:fixed;top:0;z-index:2;margin:0;left:6px;}
-.log{position:fixed;top:0;left:60px;color:white;font-weight:800;font-family:arial;z-index:2;}
+.ken{position:fixed;top:0;z-index:20;margin:0;left:6px;}
+.log{position:fixed;top:0;left:60px;color:white;font-weight:800;font-family:arial;z-index:20;}
 iframe{margin:0;}
+.linc{color:white;padding:12px;border-top:1px solid #444;}
+.linc:hover{background-color:rgba(233,233,0,0.4);color:white;cursor:pointer;}
+.xray{background-color:darkblue;padding:12px;width:56px;border-radius:9px;color:white;margin:0 auto;}
+.xray:hover{background-color:burlywood;color:black;position:sticky;top:0;}
+
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 
@@ -94,17 +101,19 @@ height="100px" width="150px" ><br>KENYATTA UNIVERSITY</h1>
 <img class="ken" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlRheK-lRziCJBcVfV7TmjYiPE4xvSNAqnnEsOfGreGJGnsGo3nps8HhE7&s=10"
 width="40px" height="40px">
 <p class="log">Kenyatta University</p>
+<div class="menyu">
 <div class="ham-menu" onclick="toggleMenu()">
 <div class="ham"></div>
 <div class="ham"></div>
 <div class="ham"></div>
 </div>
 
-<div class="nav menu" id="menu">
-<div class="link" onclick="window.location.href='#about';">ABOUT<br>(KU)</div>
-<div class="link" onclick="window.location.href='#info';">INFORMATION</div>
-<div class="link" onclick="window.location.href='#student';">STUDENT</div>
-<div class="link" onclick="window.location.href='#finance';">FINANCE</div>
+<div style="z-index:19;" class="navi menu" id="menu">
+<div class="linc"  onclick="window.location.href='#about';">ABOUT<br>(KU)</div>
+<div  class="linc" onclick="window.location.href='#info';">INFORMATION</div>
+<div   class="linc" onclick="window.location.href='#student';">STUDENT</div>
+<div   class="linc" onclick="window.location.href='#finance';">FINANCE</div>
+</div>
 </div>
 </header>
 <hr>
@@ -146,6 +155,7 @@ Its vision is to be a dynamic, inclusive, and globally competitive center of exc
 <div class="link" onclick="window.location.href='#courses';">COURSES ENROLLED</div>
 <div class="link" onclick="confirmNavigation('#results')">STUDENT RESULTS</div>
 </div>
+
 </section>
 <figure id="abour"><div class="loading">Loading ....Please wait</div>
 <h2>ABOUT THIS STUDENT</h2>
@@ -155,11 +165,13 @@ Its vision is to be a dynamic, inclusive, and globally competitive center of exc
 <b>Semester:</b> 1 and 2 (<b style="color:gray;">in progress...</b>)<br>
 <b>Student Status</b>: Active and consistent<br>
 <b>Remarks:</b> Dedicated student with excellent attendance record.<br></p>
+<div class="xray"><div   class="lini" onclick="window.location.href='#student';">Back<br> ➡</div></div>
 </figure>
 <figure id="infor"><div class="loading">Loading ....Please wait</div>
 <h2>CLASS ATTENDANCE</h2>
 <p style="color:green;">✅The student potrays fully participation and attendance of class. <br><br>
 For information about class attendance and lecture halls informations and statistics visit your Kusoma portal.</p>
+<div class="xray"><div   class="lini" onclick="window.location.href='#student';">Back <br>➡</div></div>
 </figure>
 
 <figure style="background:linear-gradient(rgb(180,189,184),rgb(208,209,200),rgb(178,190,170));padding:20px;" id="courses"><div class="loading">Loading ....Please wait</div>
@@ -187,6 +199,7 @@ For information about class attendance and lecture halls informations and statis
 <li>TSS 101 - ECONOMICS MODELS (<b>June Section</b>)</li>
 </ol>
 <p>For more information you can visit your Kusoma Portal.</p>
+<div class="xray"><div   class="lini" onclick="window.location.href='#student';">Back <br>➡</div></div>
 </figure>
 <figure id="results">
 <h2>STUDENT RESULTS</h2>
@@ -235,7 +248,7 @@ For information about class attendance and lecture halls informations and statis
 
 <hr>
 <div class="loadin"><p style="text-align:center;font-size:19px;font-weight=800;"><i style="color:gray;">Semester (2) 2024/2025 Results in progress....<br>(coming soon)</i></p></div>
-
+<div class="xray"><div   class="lini" onclick="window.location.href='#student';">Back<br> ➡</div></div>
 </figure>
 
 
@@ -246,8 +259,10 @@ For information about class attendance and lecture halls informations and statis
 <div class="link" onclick="confirmNavigation('#payment')">FEE PAYMENT</div>
 </section>
 <figure class="sec" id="feeinfo"><p class="para">Info not available please try again later.<br>Check your internet connection and try again!</p>
+<div class="xray"><div   class="lini" onclick="window.location.href='#finance';">Back<br>➡</div></div>
 </figure>
 <figure id="fees"><p class="para">Info not available please try again later.<br>Check your internet connection and try again!</p>
+<div class="xray"><div   class="lini" onclick="window.location.href='#finance';">Back<br>➡</div></div>
 </figure>
 <figure class="pay" id="payment">
 <div class="loading">Loading Please Wait...</div>
@@ -269,6 +284,7 @@ First Semester:<b>ksh.36,740</b><br>
 Second Semester:<b>ksh.36,740</b><br><br>
 <b style="background-color:darkblue;color:white;">For more information about your fee you can download the fee structure.</b> <div class="link" onclick="window.location.href='https://admissionletters.ku.ac.ke/Fees_Payment.php?id=50287650';">⬇<br>DOWNLOAD FEE STRUCTURE</div></p>
 </div>
+<div class="xray"><div   class="lini" onclick="window.location.href='#finance';">Back<br>➡</div></div>
 </figure>
 
 
