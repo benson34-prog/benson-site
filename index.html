@@ -22,7 +22,7 @@ figure{display:none;}
 .para::before{content:"❌";}
 .link:hover{background-color:burlywood;color:black;
 transition:transform 0.9s ease;}
-body{margin:0;font-family:arial;}
+body{margin:0;font-family:arial;width:100vw;}
 .about{font-size:23px;text-align:center;font-weight:bold;color:hsla(240,80%,40%,0.7);}
 h2{text-align:center;font-size:15px;}
 .cont{color:rgba(160,160,160,0.7);}
@@ -73,23 +73,33 @@ margin-top:10px;}
 
 figure ul{color:rgb(3,0,0);}
 .student-bio nav{margin-left:100px;}
-.ham{width:30px;border:2px solid rgb(245,20,33);margin:5px;}
-.ham-menu:hover{background-color:rgba(0,0,0,0.2);cursor:pointer;}
-.ham-menu{padding:5px;width:45px;margin:9px auto;}
+.ham{width:30px;border:2px solid rgb(245,250,253);margin:5px;}
+.ham-menu:hover{background-color:rgba(245,245,245,0.2);cursor:pointer;z-index:2;}
+.ham-menu{padding:5px;width:45px;margin:0 20px auto;position:fixed;top:0;left:80vw;z-index:2;}
+header{position:relative;}
+.width{background-color:black;position:fixed;height:50px;top:0;width:100%;z-index:2;margin-bottom:12px;}
+img{margin-top:40px;}
 
+.ken{position:fixed;top:0;z-index:2;margin:0;left:6px;}
+.log{position:fixed;top:0;left:60px;color:white;font-weight:800;font-family:arial;z-index:2;}
+iframe{margin:0;}
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 
 </head>
 <body>
+<div class="width"></div>
 <header><h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV6oLxR2pi1aTnA21cWtPOMZLRf5VpthMvghV0H4BEr2pmtSIMDwhnHiA&s=10"
-height="100px" width="150px" margin-left="30px"><br>KENYATTA UNIVERSITY</h1>
-
+height="100px" width="150px" ><br>KENYATTA UNIVERSITY</h1>
+<img class="ken" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlRheK-lRziCJBcVfV7TmjYiPE4xvSNAqnnEsOfGreGJGnsGo3nps8HhE7&s=10"
+width="40px" height="40px">
+<p class="log">Kenyatta University</p>
 <div class="ham-menu" onclick="toggleMenu()">
 <div class="ham"></div>
 <div class="ham"></div>
 <div class="ham"></div>
 </div>
+
 <div class="nav menu" id="menu">
 <div class="link" onclick="window.location.href='#about';">ABOUT<br>(KU)</div>
 <div class="link" onclick="window.location.href='#info';">INFORMATION</div>
@@ -122,6 +132,9 @@ height="250px" width="350px">
  and holistic development. Its emphasis on discipline, diversity, and community engagement has helped shape responsible citizens and professionals.
 Kenyatta University continues to play a pivotal role in the advancement of Kenya’s educational goals and remains a respected institution in <strong>Africa and beyond</strong>. 
 Its vision is to be a dynamic, inclusive, and globally competitive center of excellence in teaching, learning, research, and service to humanity.</p>
+
+<p style="color:black;text-align:center;">Watch the video to see how (KU) looks like</p>
+<iframe src="https://youtube.com/embed/gDF25mQcuHM?si=IbDxDdnM-c4iEXiH" controls width="100%" height="180px"></iframe>
 </section>
 <section id="info"><h2>INFORMATION</h2>
 
