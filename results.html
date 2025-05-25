@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student finance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="stylesa.css">
+</head>
+<body>
+<header>
+
+<div class="width"></div>
+<header><h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV6oLxR2pi1aTnA21cWtPOMZLRf5VpthMvghV0H4BEr2pmtSIMDwhnHiA&s=10"
+height="100px" width="150px" ><br>KENYATTA UNIVERSITY</h1>
+<img class="ken" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlRheK-lRziCJBcVfV7TmjYiPE4xvSNAqnnEsOfGreGJGnsGo3nps8HhE7&s=10"
+width="40px" height="40px">
+<p class="log">Kenyatta University</p>
+<div class="menyu">
+<div class="ham-menu" onclick="toggleMenu()">
+<div class="ham"></div>
+<div class="ham"></div>
+<div class="ham"></div>
+</div>
+
+<div style="z-index:19;" class="navi menu" id="menu">
+<div class="linc"  onclick="window.location.href='index.html';">HOME</div>
+<div class="linc"  onclick="window.location.href='kuuu.html';">ABOUT<br>(KU)</div>
+<div  class="linc" onclick="window.location.href='info.html';">INFORMATION</div>
+<div   class="linc" onclick="window.location.href='student.html';">STUDENT</div>
+<div   class="linc" onclick="window.location.href='finance.html';">FINANCE</div>
+</div>
+</div>
+</header>
+<hr>
+</header>
+<main>
+
+<figure id="results">
+<h2>STUDENT RESULTS</h2>
+<div class="loading">Loading ....Please wait</div>
+<table>
+<p class="head">First Semester 2024/2025 MUOKI B.WAMBUA Examination Results</p>
+<tr>
+<th>UNIT CODE</th> <th>UNIT NAME</th> <th>CAT MARKS</th> <th>FINAL EXAM MARKS</th> <th>TOTAL VALUE<br>(out of 100)</th> <th>GRADING</th>
+</tr>
+
+<tr>
+<th>BAC 100</th><td>Fundamentals of<br>Accounting</td><td>26/30<p class="pa">very Good</p></td><td>50/70<p class="pa">Good</p></td><td>86%<p class="pa">Very Good</p></td><td>A</td>
+</tr>
+
+<tr>
+<th>EET 100</th><td>MicroEconomic<br>Theory 1</td><td>30/30<p class="pa">Excellent</p></td><td>56/70<p class="pa">Good</p></td><td>86%<p class="pa">Very Good</p></td><td>A</td>
+</tr>
+
+
+<tr>
+<th>UCU 112</th><td>Creativity and<br>Innovation</td><td>24/30<p class="pa">Excellent</p></td><td>40/70<p class="pa">Fair</p></td><td>64%<p class="pa">Good</p></td> <td>B</td>
+</tr>
+
+
+<tr>
+<th>EES 100</th><td>Mathematics for<br>Economics</td><td>29/30<p class="pa">Very Goog</p></td><td>62/70<p class="pa">Excellent</p></td><td>91%<p class="pa">Exellent</p></td> <td>A</td>
+</tr>
+
+
+<tr>
+<th>EAE 100</th><td>Information<br>Technology</td><td>30/30<p class="pa">Excellent</p></td><td>65/70<p class="pa">Excellent</p></td><td>95%<p class="pa">Exellent</p></td> <td>A</td>
+</tr>
+
+
+<tr>
+<th>SMA 104</th><td>Calculus 1</td><td>29/30<p class="pa">Very Good</p></td><td>30/70<p class="pa">Good</p></td><td>59%<p class="pa">Good</p></td> <td>B</td>
+</tr>
+
+</table>
+<p class="remarks">GPA:80.186 <br><br>GRADE:A <br><br>POSITIONED GRADE:FIRST CLASS HONOR</p>
+<p class="rem"><b>Remarks:</b>Muoki Benson Wambua Successfully did the First Semester Exams.</p>
+<p class="rem">Note:If you have missing <b>MARKS</b> Please reach out to your respective lectures.</p>
+<p class="em">This form is only available when stumped and signed by Registra Academic.<p>
+<p class="rem"><b>Stambed by:</b> George Koori</b></p>
+<p class="rem">Info only Available to the students Portal and Kusoma Portal.<a href="https://www.ku.kusomaportal.com">Click here for Your Kusoma Portal</a> </p>
+
+<hr>
+<div class="loadin"><p style="text-align:center;font-size:19px;font-weight=800;"><i style="color:gray;">Semester (2) 2024/2025 Results in progress....<br>(coming soon)</i></p></div>
+<div class="xray"><div   class="lini" onclick="window.location.href='student.html';">Back<br> ➡</div></div>
+</figure>
+
+</main>
+
+<footer>Menu|Log Out|Sign in|Contact us<br>
+Terms of Sevice|No torrent</footer>
+<script>function toggleMenu(){const menu =
+document.getElementById("menu");
+menu.style.display=(menu.style.display ==="flex")?
+"none":"flex";
+menu.classlist.toggle('show');}</script>
+
+<script>function confirmNavigation(target){const answer= confirm("Click okay to view This Content.")
+if(answer){window.location.href=target;}}</script>
+</body>
+</html>

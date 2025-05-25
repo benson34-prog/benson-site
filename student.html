@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Student bio</title>
 <meta charset="UTF-8">
-<meta name="discription"
-content="this is results for the student">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>STUDENTS EXAM RESULTS</title>
-
-<link rel="stylesheet" href="stylesa.css"/>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="stylesa.css">
 </head>
 <body>
 <div class="width"></div>
@@ -35,8 +31,20 @@ width="40px" height="40px">
 </header>
 <hr>
 
-</main>
+
+<main>
+<h2>STUDENT BIO</h2>
+<div class="nav">
+<div class="link" onclick="window.location.href='abour.html';">ABOUT THE STUDENT</div>
+<div class="link" onclick="window.location.href='infor.html';">CLASS ATTENDANCE</div>
+<div class="link" onclick="window.location.href='courses.html';">COURSES ENROLLED</div>
+<div class="link" onclick="confirmNavigation('results.html')">STUDENT RESULTS</div>
 </div>
+
+
+
+</main>
+
 <footer>Menu|Log Out|Sign in|Contact us<br>
 Terms of Sevice|No torrent</footer>
 <script>function toggleMenu(){const menu =
@@ -46,7 +54,6 @@ menu.style.display=(menu.style.display ==="flex")?
 menu.classlist.toggle('show');}</script>
 
 <script>function confirmNavigation(target){const answer= confirm("Click okay to view This Content.")
-if(answer){window.location.href=target;}}
-</script>
+if(answer){window.location.href=target;}}</script>
 </body>
 </html>
