@@ -1,0 +1,12 @@
+h1{text-align:center;color:blue;}
+.align li{display:flex;flex-direction;align-items:center;margin-top:12px;position:relative;left:0;}
+fieldset{border:none;}
+@media only screen and (max-width:768px){.align li{position:relative;display:grid;grid-template-column:1fr;place-items:center;}}
+body{margin:0;background-color:rgba(200,200,200,0.8);}
+input{width:55%;height:35px;}
+.align{padding:30px;)}
+p{text-align:center;color:midnightblue;font-size:11px;}
+button{margin:-13px auto 23px auto;display:grid;place-items:center;background-color:blue;color:white;font-weight:600;border:none;width:20%;height:45px;}
+input:invalid{border:2px solid red;outline:none;border-radius:8px;}
+input:valid{border:2px solid green;outline:none;border-radius:8px;}
+button:hover{background:midnightblue;transform:scale(1.5);}
