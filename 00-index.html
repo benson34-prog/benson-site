@@ -2,25 +2,56 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LOG IN INFO</title>
-<link rel="stylesheet" href="stylesaa.css">
+<meta name="discription"
+content="this is results for the student">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>STUDENTS EXAM RESULTS</title>
+
+<link rel="stylesheet" href="stylesa.css"/>
+
 </head>
 <body>
-<h1>STUDENT LOG IN</h1>
-<form action="index.html">
-<fieldset>
-<ul class="align">
-<li><label for="name">First Name:</label></li>
-<li><input type="text" id="name" name="name" placeholder="e.g,Nicholos" required></li>
-<li><label for="last">Last Name:</label></li>
-<li><input type="text" id="last" name="last" placeholder="enter the last name here" required></li>
-<li><label for="password">Enter the password:</label></li>
-<li><input type="password" id="password" name="password" placeholder="e.g,3434/2023@students.ku.ac.ke" required min="3"></li>
-</ul>
-</fieldset>
-<button type="submit">Log in</button>
-<p>Forgot password?</p>
-</form>
+<div class="width"></div>
+<header>
+<img class="ken" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlRheK-lRziCJBcVfV7TmjYiPE4xvSNAqnnEsOfGreGJGnsGo3nps8HhE7&s=10"
+width="40px" height="40px">
+<h1 class="log">Kenyatta University</h1>
+<div class="menyu">
+<div class="ham-menu" onclick="toggleMenu()">
+<div class="ham"></div>
+<div class="ham"></div>
+<div class="ham"></div>
+</div>
+
+<div style="z-index:19;" class="navi menu" id="menu">
+
+<div class="linc"  onclick="window.location.href='kuuu.html';">ABOUT<br>(KU)</div>
+<div  class="linc" onclick="window.location.href='info.html';">INFORMATION</div>
+<div   class="linc" onclick="window.location.href='student.html';">STUDENT</div>
+<div   class="linc" onclick="window.location.href='finance.html';">FINANCE</div>
+</div>
+</div>
+</header>
+<hr>
+<video autoplay muted loop playsinline id="bg-video"> <source type="video/mp4" src="https://media.istockphoto.com/id/1782118376/video/university-of-notre-dame-campus-on-beautiful-summer-day-aerial-descending-shot-above-green.mp4?s=mp4-640x640-is&k=20&c=_AyqQ6svqMUkcLbH5AiopsAzAAXVoTlZp98yJ4s0eQc=">
+</video>
+<div class="abait"><h2>Welcome!</h2>
+<p>Welcome to this website where you will experience our best interactive features and navigations.</p>
+<p>This website will take you through  all the proper sites you entail to visit,It's very friendly and easy to use just clicking the top right corner menu will help you navigate through.<br><br>
+Above all,the CHINTECH is giving much greativity to you'all for visiting this website,</p>
+<p>Please not that this website is free from bugs and viruses thus it is  much secure!Enjoy your experience</p>
+</div>
+</main>
+</div>
+
+<script>function toggleMenu(){const menu =
+document.getElementById("menu");
+menu.style.display=(menu.style.display ==="flex")?
+"none":"flex";
+menu.classlist.toggle('show');}</script>
+
+<script>function confirmNavigation(target){const answer= confirm("Click okay to view This Content.")
+if(answer){window.location.href=target;}}
+</script>
 </body>
 </html>
