@@ -38,14 +38,15 @@ width="40px" height="40px">
 </div>
 </div>
 
-  ‎ <fieldset class="border">
-‎<legend>Student results appears when you select your prefered options here</legend>
-‎<label for="results"></label>
-‎<select type="option" id="results" name="results">
-‎<option selected value="2024/2025 First semester"><a href="#first">2024/2025 First semester results</a></option>
-‎<option value="2024/2025 Second Semester"><a href="#second">2024/2025 Second Semester Results</a></option>
-‎</select>
-‎</fieldset>
+  ‎ <fieldset>
+‎    <legend>Student results appear when you select your preferred option</legend>
+‎    <label for="results">Choose result period:</label>
+‎    <select id="results" name="results" onchange="showResultSection()">
+‎      <option value="">-- Select Results --</option>
+‎      <option value="first">2024/2025 First Semester Results</option>
+‎      <option value="second">2024/2025 Second Semester Results</option>
+‎    </select>
+‎  </fieldset>
 ‎
 </header>
 <hr>
@@ -54,7 +55,9 @@ width="40px" height="40px">
 
 <figure id="results">
 <h2>STUDENT RESULTS</h2>
-  <section id="first" class="sectio">
+  <section id="first">
+‎    <h2>2024/2025 First Semester Results</h2>
+‎    
 <div class="loading">Loading ....Please wait</div>
 <table>
 <p class="head">First Semester 2024/2025 Muoki B. Wambua Examination Results</p>
@@ -100,7 +103,9 @@ width="40px" height="40px">
 
 <hr>
   </section>
-  <section id="second" class="sectio">
+  <section id="second">
+‎    <h2>2024/2025 Second Semester Results</h2>
+‎    
 <div class="loading">Loading ....Please wait</div>
 <table>
 <p class="head">Second Semester (April) 2024/2025 MUOKI B.WAMBUA Examination Results</p>
@@ -169,6 +174,18 @@ menu.classlist.toggle('show');}</script>
 
 <script>function confirmNavigation(target){const answer= confirm("Click okay to view This Content.")
 if(answer){window.location.href=target;}}</script>
+  <script>
+‎    function showResultSection() {
+‎            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+‎
+‎      const selected = document.getElementById('results').value;
+‎
+‎ 
+‎      if (selected) {
+‎        document.getElementById(selected).classList.add('active');
+‎      }
+‎    }
+‎  </script>
 
 </div>
 </body>
