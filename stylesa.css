@@ -1,3 +1,7 @@
+‎.sectio{display:none;}
+‎.sectio:target{display:block;}
+‎.border{border:none;}
+legend{margin-left:34vw;}
 ‎.line{border-bottom:2px solid black;}
 ‎.align{display:flex;justify-content:center;text-align:center;}
 body{margin:0;paddimg:0;height:100%;}
