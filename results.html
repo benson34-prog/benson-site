@@ -37,22 +37,16 @@ width="40px" height="40px">
 <div   class="linc" onclick="window.location.href='finance.html';">FINANCE</div>
 </div>
 </div>
-
-  ‎ 
-‎  <div><p styles="text-align:center;">Student results appear when you select your preferred option</p></div>
-‎    <div><p styles="text-align:center;">Choose result period:</p></div>
-  ‎<div class="result" onclick="window.location.href='#first';">2024/2025 First Semester Results</div>
-‎<div class="result"  onclick="window.location.href='#second';">2024/2025 Second Semester Results</div>
+<div class="res" onclick="window.location.href='#first';">2024/2025 First Semester Results</div>
+<div class="res" onclick="window.location.href='#second';">2024/2025 Second Semester Results</div>
 </header>
 <hr>
 </header>
 <main>
 
-<div id="results">
+<figure id="results">
 <h2>STUDENT RESULTS</h2>
-  <figure id="first" class="sectio">
-‎    <h2>2024/2025 First Semester Results</h2>
-‎    
+<section id="first">
 <div class="loading">Loading ....Please wait</div>
 <table>
 <p class="head">First Semester 2024/2025 Muoki B. Wambua Examination Results</p>
@@ -95,12 +89,10 @@ width="40px" height="40px">
 <p class="em">This form is only available when stumped and signed by Registra Academic.<p>
 <p class="rem"><b>Stambed by:</b> George Koori</b></p>
 <p class="rem">Info only Available to the students Portal and Kusoma Portal.<a href="https://www.ku.kusomaportal.com">Click here for Your Kusoma Portal</a> </p>
-  
+
 <hr>
-  </figure>
-  <figure id="second" class="sectio">
-‎    <h2>2024/2025 Second Semester Results</h2>
-‎    
+</section>
+<section id="second">
 <div class="loading">Loading ....Please wait</div>
 <table>
 <p class="head">Second Semester (April) 2024/2025 MUOKI B.WAMBUA Examination Results</p>
@@ -148,9 +140,8 @@ width="40px" height="40px">
 <p class="rem"><b>Stambed by:</b> George Koori</b></p>
 <p class="rem">Info only Available to the students Portal and Kusoma Portal.<a href="https://www.ku.kusomaportal.com">Click here for Your Kusoma Portal</a> </p>
 
-
-  </figure>
-</div>
+</section>
+</figure>
 
 
 
@@ -165,22 +156,10 @@ Terms of Sevice|No torrent</footer>
 document.getElementById("menu");
 menu.style.display=(menu.style.display ==="flex")?
 "none":"flex";
-menu.classlist.toggle('show');}
-  
-‎    function showResultSection() {
-‎            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-‎
-‎      const selected = document.getElementById('results').value;
-‎
-‎ 
-‎      if (selected) {
-‎        document.getElementById(selected).classList.add('active');
-‎      }
-‎    }
-‎  
-</script>
+menu.classlist.toggle('show');}</script>
 
-
+<script>function confirmNavigation(target){const answer= confirm("Click okay to view This Content.")
+if(answer){window.location.href=target;}}</script>
 
 </div>
 </body>

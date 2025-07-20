@@ -1,13 +1,8 @@
-‎.sectio{display:none;}
-‎.sectio:target{display:block;}
-‎.border{border:none;}
-legend{margin-left:24vw;}
-‎.line{border-bottom:2px solid black;}
-‎.align{display:flex;justify-content:center;text-align:center;}
+.res{background-color:midnightblue;height:33px;width:35vw;color:white;display:flex;justify-content:center;margin:4px auto;border:1px solid gray;padding:15px;}
+.res:hover{background-color:green:color:white;}
 body{margin:0;paddimg:0;height:100%;}
-section{display:none;
-padding:0 30px;width:90%;margin:auto;}
-section:target{display:block;background-color:rgba(200,200,200,0.5);padding:22px 0;}
+section{display:none;}
+section:target{display:block;padding:22px 0;}
 .nav{display:flex;flex-wrap:wrap;padding:0 10px;gap:10px;margin-left:40px;flex-direction:column;}
 .link{background-color:white;border-radius:1px;margin:12px auto;padding:10px 32px;width:35vw;height:35vh;
 color:rgba(0,10,0,1);font-weight:700;font-family:roboto;font-size:20px;
@@ -40,8 +35,6 @@ th,td{font-size:7px;font-weight:800;}
 .remarks{margin:auto;text-align:center;font-size:7px;font-weight:800;}
 .rem{text-align:center;font-size:7px;}
 .em{color:red;text-align:center;font-size:7px;}
-‎.result{width:45px;height:30px;background-color:midnightblue;color:white;border:1px solid grey;}
-‎.result:hover{background-color:green;color:white;}
 h3{text-align:center;}
 	p{font-family:none;}
 	.loading {text-align:center;font-size:16px;
