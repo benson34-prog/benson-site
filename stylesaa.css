@@ -2,7 +2,7 @@ h1{text-align:center;color:blue;}
 .align li{display:flex;flex-direction;align-items:center;margin-top:12px;position:relative;left:0;}
 fieldset{border:none;}
 @media only screen and (max-width:768px){.align li{position:relative;display:grid;grid-template-column:1fr;place-items:center;}}
-body{margin:0;background-color:rgba(200,200,200,0.8);}
+body{margin:0;background-color:rgb(235,255,235);}
 input{width:55%;height:35px;}
 .align{padding:30px;)}
 p{text-align:center;color:midnightblue;font-size:11px;}
