@@ -1,198 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="discription" content="this is results for the student">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENTS EXAM RESULTS</title>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="discription" content="this is results for the student">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>STUDENTS EXAM RESULTS</title>
 
-        .width {
-            display: none;
-        }
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+    }
 
-        /* Header */
-        header {
-            background-color: #003366;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .ku-logo {
-            display: flex;
-            align-items: center;
-        }
-        .ku-logo img {
-            height: 50px;
-            margin-right: 15px;
-        }
-        .ku-logo span {
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .back-home {
-            background-color: #ffc107;
-            color: #000;
-            padding: 8px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-        }
+    .width {
+        display: none; /* Placeholder div from original HTML, kept but hidden */
+    }
 
-        /* Main Content */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            gap: 40px;
-        }
-        .image-collage {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-            width: 500px;
-        }
-        .image-collage img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .login-form-container {
-            background-color: #003366;
-            color: #fff;
-            padding: 30px;
-            width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-        .login-form-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            color: #fff;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 0.9em;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            box-sizing: border-box;
-            background-color: #fff;
-            color: #333;
-        }
-        .form-text {
-            font-size: 0.8em;
-            color: #ccc;
-            margin-top: 5px;
-        }
-        .error-message {
-            font-size: 0.9em;
-            color: #ff4d4f;
-            margin-top: 10px;
-        }
-        .forgot-password {
-            display: block;
-            text-align: right;
-            margin-top: 20px;
-            color: #ffc107;
-            text-decoration: none;
-        }
-        
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .back-home {
-                margin-top: 10px;
-            }
-            .container {
-                flex-direction: column;
-                padding: 20px;
-            }
-            .image-collage {
-                display: none; /* Hide the image collage on smaller screens */
-            }
-            .login-form-container {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-        button:hover{transform:scale(1.2);}
-        input:valid{color:green;outline:2px solid green;}
-    </style>
+    /* Header and Menu */
+    header {
+        background-color: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .ku-logo {
+        display: flex;
+        align-items: center;
+        color: #003366;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .ku-logo img {
+        height: 40px;
+        margin-right: 10px;
+    }
+    .menyu {
+        position: relative;
+        z-index: 100;
+    }
+    .ham-menu {
+        cursor: pointer;
+        padding: 10px;
+    }
+    .ham {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 4px 0;
+    }
+    .navi {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        min-width: 200px;
+        z-index: 99;
+    }
+    .navi.show {
+        display: flex;
+    }
+    .linc {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+    }
+    .linc a {
+        text-decoration: none;
+        color: #003366;
+    }
+    .linc a:hover {
+        text-decoration: underline;
+    }
+    .linc:last-child {
+        border-bottom: none;
+    }
+    .mini {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2em;
+        cursor: pointer;
+        color: #888;
+        display: none;
+    }
+    .linc.none .mini {
+        display: block;
+    }
+
+    /* Message Center and Notifications */
+    .message-center {
+        background-color: #fff;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .message-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .message-header h2 {
+        font-size: 1.1em;
+        color: #333;
+    }
+    .notification-icons {
+        display: flex;
+        gap: 15px;
+    }
+    .notification-icons .icon {
+        position: relative;
+        cursor: pointer;
+    }
+    .notification-icons .icon img {
+        width: 24px;
+    }
+    .notification-badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: #e74c3c;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 0.7em;
+        line-height: 1;
+    }
+
+    /* Student Center Section */
+    .student-center {
+        background-color: #fff;
+        margin: 20px;
+        padding: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .student-center h2 {
+        text-align: center;
+        font-size: 1.4em;
+        color: #333;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+    .student-link-list {
+        list-style: none;
+        padding: 0 20px;
+        margin: 0;
+    }
+    .student-link-list li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        color: #555;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+    .student-link-list li:last-child {
+        border-bottom: none;
+    }
+
+    /* NMUE Section */
+    .nmue-section {
+        background-color: #fff;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .nmue-section h2 {
+        font-size: 1.4em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .nmue-section .line {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 15px;
+    }
+
+</style>
 </head>
 <body>
+<header>
+    <div class="ku-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFEqBy5244BIiTA7J2HQNAhasKvx20jueg_w&s" alt="KU Logo">
+        <span>Kenyatta University</span>
+    </div>
     
-    <header>
-        <div class="ku-logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBCfjhtSems7dtZhRGigr08gRoSgSUHfbslZAHIXmS4Ua2YGDH6tHNySTX&s=10" alt="KU Logo">
-            <span>Kenyatta University<br>Transforming Higher Education... Enhancing Lives</span>
+    <div class="menyu">
+        <div class="ham-menu" onclick="toggleMenu()">
+            <div class="ham"></div>
+            <div class="ham"></div>
+            <div class="ham"></div>
         </div>
-        <a href="index.html" class="back-home">BACK TO HOME</a>
-    </header>
-
-    <main class="container">
-     
-        <div class="login-form-container">
-            <h2>Student Login</h2>
-            <form action="00-index.html">
-                <div class="form-group">
-                    <label for="username">Required Field *</label>
-                    <label for="username">Username *</label>
-                    <input type="text" id="username" name="username" required pattern="Benson">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password *</label>
-                    <input type="password" id="password" name="password" required pattern="K24/5257/2024">
-                </div>
-                <div class="form-text">
-                    Password is case sensitive
-                </div>
-                <button style="width:100%;padding:10px;background-color:yellow;color:black;" type="submit">Log in</button>
-            </form>
-            <a href="#" class="forgot-password">Forgot your Password?</a>
-        </div>
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdyqTehCd-vh5MJUDiIUOYj-6Hhv7ZIzkQbQ&s" alt="Kenyatta University Image 1">
-       
+        <div class="navi menu" id="menu">
+            <div class="linc none">
+                <div class="mini" onclick="toggleMenu()">❌</div>
             </div>
-    </main>
+             <div class="linc" onclick="window.location.href='index.html';">HOME</div>
+              <div class="linc" onclick="window.location.href='kuuu.html';">About<br>(KU)</div>
+            <div class="linc" onclick="window.location.href='info.html';">INFORMATION</div>
+            <div class="linc" onclick="window.location.href='student.html';">STUDENT</div>
+            <div class="linc" onclick="window.location.href='finance.html';">FINANCE</div>
+        </div>
+    </div>
+</header>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-            menu.classList.toggle('show');
-        }
+<main>
+    <div class="message-center">
+        <div class="message-header">
+            <h2>MESSAGING AND STUDENT INFO</h2>
+            <div class="notification-icons">
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/fa314a/bell.png" alt="Notifications">
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/fa314a/user.png" alt="Profile">
+                    <span class="notification-badge">1</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-body">
+            <p>Your portal announcements will appear here.</p>
+        </div>
+    </div>
 
-        function confirmNavigation(target) {
-            const answer = confirm("Click okay to view This Content.");
-            if (answer) {
-                window.location.href = target;
-            }
+    <div class="student-center">
+        <h2>STUDENT CENTER</h2>
+        <ul class="student-link-list">
+            <li>ACADEMIC RECORD</li>
+            <li>STUDENT FEE STATEMENT</li>
+            <li>FEE PAYMENT</li>
+            <li>EXAM CARD</li>
+            <li>UNIT REGISTRATION</li>
+            <li>ACCOMMODATION</li>
+            <li>HOSTEL BOOKING</li>
+            <li>LEAVE APPLICATION</li>
+            <li>REMARKS</li>
+        </ul>
+    </div>
+
+    <div class="nmue-section">
+        <h2>NMUE US:</h2>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</main>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        menu.classList.toggle('show');
+    }
+</script>
+
+<script>
+    function confirmNavigation(target) {
+        const answer = confirm("Click okay to view This Content.");
+        if (answer) {
+            window.location.href = target;
         }
-    </script>
+    }
+</script>
 </body>
 </html>
