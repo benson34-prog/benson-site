@@ -1,36 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LOG IN INFO</title>
-<link rel="stylesheet" href="stylesaa.css">
-  <style>
-      .loi{background-color:blue;color:white;padding:15px;text-align:center;}
-    back{background-color:lightblue;color:white;}
-.cent{margin:auto;}
-    .bid{background-color:rgb(255,255,255);padding:15px;margin:auto;height:40vh;width:30vw;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="discription" content="this is results for the student">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENTS EXAM RESULTS</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .width {
+            display: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #003366;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ku-logo {
+            display: flex;
+            align-items: center;
+        }
+        .ku-logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .ku-logo span {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .back-home {
+            background-color: #ffc107;
+            color: #000;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+        .image-collage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 500px;
+        }
+        .image-collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .login-form-container {
+            background-color: #003366;
+            color: #fff;
+            padding: 30px;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .login-form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #fff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #333;
+        }
+        .form-text {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 5px;
+        }
+        .error-message {
+            font-size: 0.9em;
+            color: #ff4d4f;
+            margin-top: 10px;
+        }
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin-top: 20px;
+            color: #ffc107;
+            text-decoration: none;
+        }
+        
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .back-home {
+                margin-top: 10px;
+            }
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .image-collage {
+                display: none; /* Hide the image collage on smaller screens */
+            }
+            .login-form-container {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        button:hover{transform:scale(1.2);}
+        input:valid{color:green;outline:2px solid green;}
+    </style>
 </head>
 <body>
-<h1 class="back cent"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFEqBy5244BIiTA7J2HQNAhasKvx20jueg_w&s">
-<form action="00-index.html">
-<fieldset>
-  <legend class="loi">STUDENT LOG IN</legend>
-<ul class="align">
-<li><label for="name">First Name:</label></li>
-<li><input type="text" id="name" name="name" placeholder="e.g,Nicholos" pattern="Benson" required></li>
-<li><label for="last">Last Name:</label></li>
-<li><input type="text" id="last" name="last" placeholder="enter the last name here" required pattern="Wambua"></li>
-<li><label for="password">Enter the password:</label></li>
-<li><input type="password" id="password" name="password" placeholder="e.g,3434/2023@students.ku.ac.ke" required min="3" pattern="K24/5257/2024"></li>
-</ul>
-</fieldset>
-<button type="submit">Log in</button>
-<p>Forgot password?</p>
-  <p>password is case sensitive <span styles="color:red;">*</span></p>
-  <p><img class="cent" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxMiK4fi6kGVyAnvPkV47Ky5jVOD4mPXCYnA&s"></p>
-</form>
+    
+    <header>
+        <div class="ku-logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBCfjhtSems7dtZhRGigr08gRoSgSUHfbslZAHIXmS4Ua2YGDH6tHNySTX&s=10" alt="KU Logo">
+            <span>Kenyatta University<br>Transforming Higher Education... Enhancing Lives</span>
+        </div>
+        <a href="index.html" class="back-home">BACK TO HOME</a>
+    </header>
 
+    <main class="container">
+     
+        <div class="login-form-container">
+            <h2>Student Login</h2>
+            <form action="00-index.html" method="post">
+                <div class="form-group">
+                    <label for="username">Required Field *</label>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required pattern="Benson">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required pattern="K24/5257/2024">
+                </div>
+                <div class="form-text">
+                    Password is case sensitive
+                </div>
+                <button style="width:100%;padding:10px;background-color:yellow;color:black;" type="submit">Log in</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot your Password?</a>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdyqTehCd-vh5MJUDiIUOYj-6Hhv7ZIzkQbQ&s" alt="Kenyatta University Image 1">
+       
+            </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+            menu.classList.toggle('show');
+        }
+
+        function confirmNavigation(target) {
+            const answer = confirm("Click okay to view This Content.");
+            if (answer) {
+                window.location.href = target;
+            }
+        }
+    </script>
 </body>
 </html>
