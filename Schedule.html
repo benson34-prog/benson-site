@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Course Schedule</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>body{padding:5px;margin:0;font-family:"sans-serif",arial;background-color:whitesmoke;}
+.course-promo{background-color:white;border-radius:3px;box-shadow: 4px 4px 5px 8px rgba(0,0,0,.1);padding:10px;margin:0 20px 23px 22px;}
+.course-promo h1{text-align:center;}
+.course-promo .school-name{font-size:28px;color:navy;text-align:center;margin-bottom:10px;}
+ul{list-style-type:none;box-shadow:5px 5px 5px black;padding:10px;margin:0 20px 20px 20px;background-color:rgba(255,0,0,0.9);border-radius:5px;}
+label{width:100%;display:block;font-weight:bold;margin:10px 0 5px;color:white;}</style>
+
+    </head>
+    <body>
+        <header>
+            <div class="course-promo">
+            <h1>Course Schedule <br><br></h1>
+            <div style="font-size:13px;color:midnightblue;text-align:center;" id="clock"></div>
+            <div class="school-name">Kenyatta University</div>
+            </div>
+        </header>
+        <section>
+            <form action="/submit" method='post'>
+                <ul>
+                    <li><label for="name">Please select the course code here<br>To preview the course.</label>
+                    <select type="option" id="name">
+                        <option value="--select course--">--Select Course--</option>
+                        <option value="EAE 101">EAE 101</option>
+                        <option value="EES 200">EES 200</option>
+                        <option value="EAE 203">EAE 203</option>
+                        <option value="SMA 200">SMA 200</option>
+                        <option value="EET 200">EET 200</option>
+                        <option value="SST 201">SST 201</option>
+                        <option value="SST 202">SST 202</option>
+                    </select>
+                    </li>
+                     <li>
+                        <label for="instructor">Enter the instructor name:</label>
+                        <input type="text" id="instructor" name="instructor" required>
+                     </li>
+                      <li><label for="semester">Select the semester:</label>
+                    <select type="option" id="semester">
+                        <option value="2024/2025 semester 1">2024/2025 semester 1</option>
+                        <option value="2024/2025 semester 2">2024/2025 semester 2</option>
+                        <option value="2025/2026 semester 1">2025/2026 semester 1</option>
+                        <option value="2025/2026 semester 2">2025/2026 semester 2</option>
+                    
+                    </select>
+                    </li>
+                       <li> Current Student</li>
+                        <li><label for="undergraduate">Undergraduate:</label>
+                    <input type="radio" id="undergraduate" name="graduate"></li>
+                         <li><label for="postgraduate">Postgraduate:</label>
+                    <input type="radio" id="postgraduate" name="graduate"></li>
+                </ul>
+                <button style="width:100%;color:white;background-color:blueviolet;" type="submit">Submit</button>
+            </form>
+            <script>function updateDateTime() {
+  let now = new Date();
+ 
+  // Kenyan timezone options
+  let timeOptions = {
+    timeZone: "Africa/Nairobi",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  };
+  let dateOptions = {
+    timeZone: "Africa/Nairobi",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long"
+  };
+ 
+  let timeString = now.toLocaleTimeString("en-KE", timeOptions);
+  let dateString = now.toLocaleDateString("en-KE", dateOptions);
+  document.getElementById("clock").textContent = `${dateString} — ${timeString}`;
+}
+updateDateTime();
+setInterval(updateDateTime, 1000);</script>
+    </body>
+    </html>
