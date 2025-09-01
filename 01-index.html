@@ -5,6 +5,8 @@
 <meta name="discription" content="this is results for the student">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>STUDENTS EXAM RESULTS</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 
 <style>
     /* General Styles */
@@ -57,15 +59,17 @@
     .navi {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #fff;
+        position: fixed;
+        top: 12%;
+        left:1px;
+        background-color: #a8a8a8;
         border: 1px solid #ccc;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 10px;
-        min-width: 200px;
+        width:100%;
         z-index: 99;
+        max-height:85%;
+        overflow-y:scroll;
     }
     .navi.show {
         display: flex;
@@ -79,8 +83,8 @@
         text-decoration: none;
         color: #003366;
     }
-    .linc a:hover {
-        text-decoration: underline;
+    .linc:hover {
+        background-color:rgb(177, 175, 175);
     }
     .linc:last-child {
         border-bottom: none;
@@ -188,8 +192,11 @@
         border-bottom: 1px solid #ccc;
         margin-bottom: 15px;
     }
+    .material-symbols-outlined{vertical-align:middle;font-size:18px;font-weight:normal;}
+    .yellow{background-color:rgb(179, 179, 9);}
 
 </style>
+<link rel="stylesheet" href="ntyles.css">
 </head>
 <body>
 <header>
@@ -205,14 +212,20 @@
             <div class="ham"></div>
         </div>
         <div class="navi menu" id="menu">
-            <div class="linc none">
-                <div class="mini" onclick="toggleMenu()">❌</div>
-            </div>
-             <div class="linc" onclick="window.location.href='index.html';">HOME</div>
-              <div class="linc" onclick="window.location.href='kuuu.html';">About<br>(KU)</div>
-            <div class="linc" onclick="window.location.href='info.html';">INFORMATION</div>
-            <div class="linc" onclick="window.location.href='student.html';">STUDENT</div>
-            <div class="linc" onclick="window.location.href='finance.html';">FINANCE</div>
+            
+             <div class="linc" onclick="toggleMenu()">HOME</div>
+             <div class="linc yellow" onclick="window.location.href='index.html'"><span class="material-symbols-outlined">Home</span>HOME</div>
+              <div class="linc" onclick="window.location.href='kuuu.html';"><span class="material-symbols-outlined">apartment</span>ABOUT<br>(KU)</div>
+            <div class="linc" onclick="window.location.href='info.html';"><span class="material-symbols-outlined">article</span>INFORMATION</div>
+            <div class="linc yellow" onclick="window.location.href='';"><span class="material-symbols-outlined">menu</span>STUDENT Homepage</div>
+            <div class="linc" onclick="window.location.href='abour.html';"><span class="material-symbols-outlined">view_cozy</span>About Student</div>
+             <div class="linc" onclick="window.location.href='infor.html';"><span class="material-symbols-outlined">view_cozy</span>Class Attendance</div>
+              <div class="linc" onclick="window.location.href='results.html';"><span class="material-symbols-outlined">view_cozy</span>View Academic Results</div>
+               <div class="linc" onclick="window.location.href='';"><span class="material-symbols-outlined">view_cozy</span>Students finance</div>
+                <div class="linc" onclick="window.location.href='feeinfo.html';"><span class="material-symbols-outlined">view_cozy</span>view Feee Structure</div>
+                 <div class="linc" onclick="window.location.href='fees.html';"><span class="material-symbols-outlined">view_cozy</span>view Fee Payment</div>
+                  <div class="linc" onclick="window.location.href='payment.html';"><span class="material-symbols-outlined">view_cozy</span>view Fee payment</div>
+                   <div class="linc" onclick="window.location.href='';"><span class="material-symbols-outlined"></span>Contact support</div>
         </div>
     </div>
 </header>
